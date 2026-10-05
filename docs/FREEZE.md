@@ -1,0 +1,14 @@
+# Methodology freeze · QIS-1.0
+Declared 2026-10-04 before executing the first backtest. AI-assisted implementation; no owner approval asserted.
+
+Baseline: three USD research sleeves; month-end XNYS session closes; trailing 252-session simple total returns strictly > 0; indicator/3 base allocations; 63 daily returns, sample covariance (ddof=1); annualization 252; 10% reference; 1% denominator floor; scale capped at 1. Decisions after close, execution next session close, returns on new holdings from that execution close onward. Post-cost target fractions; 5 bps on absolute risky notional. Cash ACT/360 simple accrual over each calendar-day interval at rate available at its starting close. Index anchor 100 at close before first execution. No interest before capital inception.
+
+Overlay rebalances daily after launch (including restoring drift when the scale is unchanged). Trend-only and equal-third comparators rebalance only on lagged month-end instructions; cash does not trade. All share the baseline launch/evaluation date. Insufficient history prevents launch. Monthly signals may be all off at launch.
+
+Synthetic input period 2004-01-02 to 2025-12-31, seed 1729; no observed asset data. Warm-up through first eligible month end. Development: launch through 2016-12-30; held-back: 2017-01-03 through 2025-12-31. Historical intended data: 2005–2025 plus genuinely available warm-up, development through 2016, held-back 2017–2025. GLD prevents a full 252-session warm-up at early 2005; defer launch rather than invent data. Historical study blocked pending rights/data.
+
+Predeclared one-at-a-time explorations: lookback 126 (baseline 252), covariance window 126 (baseline 63), reference .06/.14 (baseline .10), costs 0/10/20 bps (baseline 5). No optimizer or best-parameter choice. All scenarios forced to common baseline launch and evaluated on common dates. Cost 0 is also the gross path. Holdout is retrospective, not genuinely unseen future evidence. Synthetic regimes are designed software fixtures; inspecting their outcomes is not empirical validation.
+
+Change log: initial clarification—daily overlay restores target fractions daily, even when scale is unchanged. Pre-trade notional is the turnover denominator, without a half factor. Cash rate staleness is bounded at seven calendar days from observation. Historical local adapter requires explicit permission for local/automated/AI-assisted processing; historical public export is disabled in this version.
+
+2026-10-05 cash-only supplement: H15-CONSERVATIVE-CALENDAR-1 models next joint federal/XNYS day publication at 16:15 Eastern, then first strictly later XNYS close. See CASH_AVAILABILITY.md. This is an explicit retrospective availability assumption, not an archived publication database. Baseline strategy parameters and evaluation periods are unchanged; no ETF historical strategy evaluation has occurred.

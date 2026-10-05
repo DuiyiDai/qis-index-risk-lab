@@ -1,0 +1,15 @@
+{
+  "mode": "historical",
+  "coverage_start": "2005-01-03",
+  "coverage_end": "2025-12-31",
+  "cash_kind": "official_short_rate",
+  "cash_source": {"source_url": "REQUIRED official source", "retrieved_at": "REQUIRED UTC timestamp", "source_basis": "REQUIRED", "accrual": "ACT/360 simple per interval", "publication_lag": "REQUIRED", "availability": "REQUIRED first session close after actual publication", "permitted_uses": "REQUIRED"},
+  "permissions": {"local_research": false, "automated_processing": false, "ai_assisted_processing": false, "public_derived": false, "raw_redistribution": false},
+  "rights_evidence": "REQUIRED license or terms and review record",
+  "instruments": {
+    "equity": {"instrument": "SPY", "currency": "USD", "inception": "1993-01-22", "return_type": "total_return_reinvestment", "source_url": "REQUIRED", "retrieved_at": "REQUIRED", "adjustment": "REQUIRED", "availability": "close snapshot, not point-in-time vintage", "permitted_uses": "REQUIRED"},
+    "treasury": {"instrument": "IEF", "currency": "USD", "inception": "2002-07-22", "return_type": "total_return_reinvestment", "source_url": "REQUIRED", "retrieved_at": "REQUIRED", "adjustment": "REQUIRED", "availability": "close snapshot, not point-in-time vintage", "permitted_uses": "REQUIRED"},
+    "gold": {"instrument": "GLD", "currency": "USD", "inception": "2004-11-18", "return_type": "total_return_reinvestment", "source_url": "REQUIRED", "retrieved_at": "REQUIRED", "adjustment": "REQUIRED", "availability": "close snapshot, not point-in-time vintage", "permitted_uses": "REQUIRED"}
+  },
+  "snapshot_hashes": {"prices": "REQUIRED canonical SHA256", "rates": "REQUIRED canonical SHA256"}
+}
